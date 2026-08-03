@@ -48,7 +48,7 @@ jobs:
         run: |
           brew install --build-from-source godfaddaai/tap/mpai
           brew test godfaddaai/tap/mpai
-          test "$(mpai --version)" = "0.4.8"
+          test "$(mpai --version)" = "0.4.9"
           brew uninstall godfaddaai/tap/mpai
           test ! -e "$(brew --prefix)/bin/mpai"
           test ! -e "$(brew --prefix)/bin/multiplayer-ai"
