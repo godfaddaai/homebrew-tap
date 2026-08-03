@@ -44,6 +44,15 @@ jobs:
       - run: brew test-bot --only-tap-syntax
       - run: brew test-bot --only-formulae
 
+      - name: Install, test, and uninstall mpai
+        run: |
+          brew install --build-from-source godfaddaai/tap/mpai
+          brew test godfaddaai/tap/mpai
+          test "$(mpai --version)" = "0.4.8"
+          brew uninstall godfaddaai/tap/mpai
+          test ! -e "$(brew --prefix)/bin/mpai"
+          test ! -e "$(brew --prefix)/bin/multiplayer-ai"
+
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
