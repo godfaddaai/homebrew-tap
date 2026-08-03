@@ -1,18 +1,29 @@
-# Godfaddaai Tap
+# mpai Homebrew tap
 
-## How do I install these formulae?
+Install [mpai](https://github.com/godfaddaai/multiplayer-ai), terminal-native
+multiplayer for Codex and Claude Code:
 
-`brew install godfaddaai/tap/<formula>`
+```bash
+brew install godfaddaai/tap/mpai
+mpai setup --name "Your Name"
+```
 
-Or `brew tap godfaddaai/tap` and then `brew install <formula>`.
+The direct install automatically adds this tap. To add it first instead:
 
-Or, in a `brew bundle` `Brewfile`:
+```bash
+brew tap godfaddaai/tap
+brew install mpai
+```
+
+For a `Brewfile`:
 
 ```ruby
 tap "godfaddaai/tap"
-brew "<formula>"
+brew "mpai"
 ```
 
-## Documentation
+## Links
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+- [Product and installation guide](https://godfaddaai.github.io/multiplayer-ai/)
+- [Source](https://github.com/godfaddaai/multiplayer-ai)
+- [Security policy](https://github.com/godfaddaai/multiplayer-ai/blob/main/SECURITY.md)
