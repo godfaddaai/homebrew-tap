@@ -10,10 +10,10 @@ class Mpai < Formula
     strategy :github_latest
   end
 
-  depends_on "node@20"
+  depends_on "node@22"
 
   def install
-    system formula_opt_bin("node@20")/"npm", "install", *std_npm_args
+    system formula_opt_bin("node@22")/"npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
   end
 
