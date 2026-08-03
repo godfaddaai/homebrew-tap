@@ -5,6 +5,11 @@ class Mpai < Formula
   sha256 "77964c00ac6b890edcf6e34ab899b4a0914ece1d987c27b8776a5e1d5e9db92e"
   license "MIT"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   depends_on "node@20"
 
   def install
